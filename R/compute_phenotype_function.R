@@ -32,8 +32,8 @@ calcPhenotype <- function(trainingExprData, trainingPtype, testExprData, batchCo
 {
   
   # check if the supplied data are of the correct classes
-  #if(class(testExprData) != "matrix") stop("ERROR: \"testExprData\" must be a matrix.");
-  if(sum(class(testExprData) != "matrix") >= 1) stop("ERROR: \"testExprData\" must be a matrix.");
+  #if(class(testExprData)[1] != "matrix") stop("ERROR: \"testExprData\" must be a matrix.");
+  if(sum(class(testExprData)[1] != "matrix") >= 1) stop("ERROR: \"testExprData\" must be a matrix.");
   #if(class(trainingExprData) != "matrix") stop("ERROR: \"trainingExprData\" must be a matrix.");
   if(sum(class(trainingExprData) != "matrix") >= 1) stop("ERROR: \"trainingExprData\" must be a matrix.");
   if(class(trainingPtype) != "numeric") stop("ERROR: \"trainingPtype\" must be a numeric vector.");
